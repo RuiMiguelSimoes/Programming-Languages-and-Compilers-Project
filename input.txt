@@ -1,0 +1,13 @@
+func main () { 
+
+    int x = 3;
+    float y = 1.75;
+    char c = 'c';
+    string s = "batata";
+
+    print("vou comer batatas cozidas");
+    print(x);
+    print(y);
+    print(c);
+    print(s);
+    }

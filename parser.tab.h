@@ -58,12 +58,33 @@ extern int yydebug;
     FLOAT = 259,                   /* FLOAT  */
     CHAR = 260,                    /* CHAR  */
     STRING = 261,                  /* STRING  */
-    ADD = 262,                     /* ADD  */
-    SUB = 263,                     /* SUB  */
-    MUL = 264,                     /* MUL  */
-    DIV = 265,                     /* DIV  */
-    POW = 266,                     /* POW  */
-    SEMICOLON = 267                /* SEMICOLON  */
+    BOOL = 262,                    /* BOOL  */
+    FUNCTION = 263,                /* FUNCTION  */
+    MAIN = 264,                    /* MAIN  */
+    ID = 265,                      /* ID  */
+    INT_TYPE = 266,                /* INT_TYPE  */
+    FLOAT_TYPE = 267,              /* FLOAT_TYPE  */
+    CHAR_TYPE = 268,               /* CHAR_TYPE  */
+    STRING_TYPE = 269,             /* STRING_TYPE  */
+    BOOL_TYPE = 270,               /* BOOL_TYPE  */
+    MUL = 271,                     /* MUL  */
+    DIV = 272,                     /* DIV  */
+    ADD = 273,                     /* ADD  */
+    SUB = 274,                     /* SUB  */
+    MOD = 275,                     /* MOD  */
+    SEMICOLON = 276,               /* SEMICOLON  */
+    EQ = 277,                      /* EQ  */
+    COMMA = 278,                   /* COMMA  */
+    COLON = 279,                   /* COLON  */
+    ASSIGN = 280,                  /* ASSIGN  */
+    LSQBRACE = 281,                /* LSQBRACE  */
+    RSQBRACE = 282,                /* RSQBRACE  */
+    LPAREN = 283,                  /* LPAREN  */
+    RPAREN = 284,                  /* RPAREN  */
+    LBRACE = 285,                  /* LBRACE  */
+    RBRACE = 286,                  /* RBRACE  */
+    END = 287,                     /* END  */
+    PRINT = 288                    /* PRINT  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -72,14 +93,15 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 11 "parser.y"
+#line 32 "parser.y"
 
     int intValue;
     double floatValue;
     char charValue;
     char* stringValue;
+    char* idValue;
 
-#line 83 "parser.tab.h"
+#line 105 "parser.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
